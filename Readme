@@ -1,2 +1,149 @@
-#  Online Healthcare Management System 
+  # Online Healthcare Management System
+
+A fully functional Java Swing + MySQL hospital management application with role-based access control and clean layered architecture.  
+This project is open source and released under the **MIT License**.
+
+---
+
+## 🚀 About the Project
+
+This system provides a complete healthcare management workflow, including:
+
+- Role-based login (Admin / Doctor / Patient)
+- Appointment booking & management
+- Patient medical records handling
+- Doctor availability & schedule view
+- Admin control over accounts & configurations
+- Clean separation using MVC + DAO + Service architecture
+
+Suitable for:
+- Students building real portfolio projects  
+- Open-source contributors  
+- Companies learning layered Java application design
+
+---
+
+## 🧠 Tech Stack
+
+- **Java** (JDK 8 or 17)
+- **Swing UI**
+- **MySQL Database**
+- **JDBC Connector**
+- **Layered Design (MVC + DAO + Service)**
+
+---
+
+## 📁 Project Structure
+
+healthcare-system/
+│
+├── sql/
+│ └── healthcare_schema.sql
+│
+├── src/
+│ └── com/healthcare/
+│ ├── model/ # Entity classes (User, Patient, Doctor, etc.)
+│ ├── dao/ # DAO Interfaces
+│ │ └── impl/ # JDBC Implementations
+│ ├── service/ # Business logic
+│ │ └── impl/
+│ ├── ui/ # Swing screens & panels
+│ └── util/ # DB connection & utilities
+│
+└── lib/
+└── mysql-connector-j.jar
+
+
+---
+
+## ⚙️ Setup & Running
+
+### 1️⃣ Import into IntelliJ (or any IDE)
+- Clone the project
+- Open the folder in your Java IDE
+
+### 2️⃣ Install JDBC Driver
+If using JAR:
+- Place `mysql-connector-j.jar` in `/lib`
+- Add it as a project dependency
+
+### 3️⃣ Create the Database
+Run in MySQL Workbench:
+
+```sql
+SOURCE sql/healthcare_schema.sql;
+
+4️⃣ Configure DB Credentials
+private static final String URL = "jdbc:mysql://localhost:3306/healthcare_db";
+private static final String USER = "root";
+private static final String PASSWORD = "YOUR_PASSWORD";
+
+5️⃣ Run the Application
+public static void main(String[] args) {
+    new LoginFrame().setVisible(true);
+}
+
+🔐 Default Login (Sample)
+| Role    | Email                                               | Password   |
+| ------- | --------------------------------------------------- | ---------- |
+| Admin   | [admin@hospital.com](mailto:admin@hospital.com)     | admin123   |
+| Doctor  | [doctor1@hospital.com](mailto:doctor1@hospital.com) | doctor123  |
+| Patient | [patient1@mail.com](mailto:patient1@mail.com)       | patient123 |
+
+✔️ Key Features
+Admin
+
+Manage users
+
+View all appointments
+
+System configuration
+
+Doctor
+
+View patient appointments
+
+Add/update medical reports
+
+View ratings/feedback
+
+Patient
+
+Book appointments
+
+View prescription history
+
+Rate doctors
+
+💡 Contribution Guide
+
+1. Fork the repo
+
+2. Create new branch:
+git checkout -b feature-name
+
+3. Commit changes:
+git commit -m "Added new feature"
+
+4.Push to GitHub:
+git push origin feature-name
+
+📜 License
+MIT License
+
+Copyright (c) 2024
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the “Software”), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software.
+
+
+--> the project is open for educational purpose and personal use . Attribution optional appreciated. 
+
+
+
+
+
 
