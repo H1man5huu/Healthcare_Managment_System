@@ -1,0 +1,15 @@
+<web-app>
+
+    <servlet>
+        <servlet-name>PatientServlet</servlet-name>
+        <servlet-class>
+            hospital.management.system.servlet.PatientServlet
+        </servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PatientServlet</servlet-name>
+        <url-pattern>/patient</url-pattern>
+    </servlet-mapping>
+
+</web-app>
